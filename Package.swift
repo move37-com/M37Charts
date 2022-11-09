@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Charts",
+    name: "M37Charts",
     platforms: [
           .iOS(.v12),
           .tvOS(.v12),
@@ -11,19 +11,19 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Charts",
-            targets: ["Charts"]),
+            name: "M37Charts",
+            targets: ["M37Charts"]),
         .library(
             name: "ChartsDynamic",
             type: .dynamic,
-            targets: ["Charts"])
+            targets: ["M37Charts"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
     ],
     targets: [
         .target(
-            name: "Charts",
+            name: "M37Charts",
             dependencies: [.product(name: "Algorithms", package: "swift-algorithms")]
         )
     ],
